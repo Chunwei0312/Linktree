@@ -68,7 +68,7 @@ const projects = [
     href: 'https://chunwei0312.github.io/Big-Game/',
     description:
       '以 React 與 TypeScript 製作的瀏覽器遊戲作品，展示互動邏輯、畫面呈現與前端實作能力。',
-    tone: 'from-[#ece3d8] via-[#fffaf6] to-[#e7dbcf]'
+    tone: 'bg-[#d9e4d3]'
   },
   {
     name: 'Pocket Arcade | Web App Engineering Project',
@@ -76,15 +76,15 @@ const projects = [
     href: 'https://chunwei0312.github.io/Mini-Game/',
     description:
       '使用 React、TypeScript 與 Vite 建立的小型互動作品，呈現元件化設計與遊戲邏輯整理能力。',
-    tone: 'from-[#e1e7de] via-[#fbfdfb] to-[#e6ece3]'
+    tone: 'bg-[#e7d6d2]'
   }
 ];
 
 const socialTones = [
-  'from-[#f4e5dc] via-[#fff9f6] to-[#e9ddd3]',
-  'from-[#dfe7df] via-[#fbfdfb] to-[#e8efe7]',
-  'from-[#ebe4dc] via-[#fffdfa] to-[#ede8e1]',
-  'from-[#efe2e7] via-[#fff9fc] to-[#eadde4]'
+  'bg-[#dde6d7]',
+  'bg-[#e8ddd5]',
+  'bg-[#ece4d9]',
+  'bg-[#e8d9dd]'
 ];
 
 function isExternalLink(href) {
@@ -153,7 +153,7 @@ function App() {
                   href={item.href}
                   target={isExternalLink(item.href) ? '_blank' : undefined}
                   rel={isExternalLink(item.href) ? 'noreferrer' : undefined}
-                  className={`soft-link group flex min-h-[12.5rem] flex-col justify-between bg-gradient-to-br ${socialTones[index % socialTones.length]}`}
+                  className={`soft-link group flex min-h-[12.5rem] flex-col justify-between ${socialTones[index % socialTones.length]}`}
                 >
                   <div className="min-w-0">
                     <div className="flex items-start justify-between gap-4">
@@ -208,7 +208,7 @@ function App() {
                   </p>
                 </div>
 
-                <div className="soft-panel bg-[#f6efe9]/82">
+                <div className="soft-panel bg-[#eadfd6]/88">
                   <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#9b8577]">
                     Location
                   </p>
@@ -217,7 +217,7 @@ function App() {
                   </p>
                 </div>
 
-                <div className="soft-panel bg-[#dfe7df]/75">
+                <div className="soft-panel bg-[#cfdcca]/88">
                   <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#6c756d]">
                     Focus
                   </p>
@@ -255,7 +255,7 @@ function App() {
                 href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className={`soft-link group flex min-h-[13rem] flex-col justify-between bg-gradient-to-br ${project.tone}`}
+                className={`soft-link group flex min-h-[13rem] flex-col justify-between ${project.tone}`}
               >
                 <div className="min-w-0">
                   <div className="flex items-start justify-between gap-4">
@@ -299,7 +299,7 @@ function App() {
               </p>
             </div>
 
-            <div className="soft-panel bg-[#f3e4e8]/78">
+            <div className="soft-panel bg-[#d8c8cd]/88">
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#8f6f7d]">
                 Note
               </p>

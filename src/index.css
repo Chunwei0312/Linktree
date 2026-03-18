@@ -6,7 +6,7 @@
 
 :root {
   color: #2d2825;
-  background: #f8f4ef;
+  background: #f7f2ec;
   font-family: 'Noto Sans TC', 'PingFang TC', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -45,23 +45,25 @@ a {
 
 .korean-bg {
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.75), transparent 28%),
-    linear-gradient(135deg, #f8f4ef 0%, #f4eee8 42%, #f7f3ee 100%);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.88), transparent 26%),
+    radial-gradient(circle at 82% 14%, rgba(201, 216, 195, 0.28), transparent 20%),
+    radial-gradient(circle at 68% 72%, rgba(216, 180, 176, 0.2), transparent 18%),
+    linear-gradient(135deg, #f7f2ec 0%, #f1e7dd 45%, #f8f3ee 100%);
 }
 
 .ambient-blur {
   position: absolute;
   border-radius: 999px;
-  opacity: 0.7;
-  filter: blur(70px);
+  opacity: 0.82;
+  filter: blur(90px);
   animation: float 16s ease-in-out infinite;
 }
 
 .soft-label {
   display: inline-flex;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: linear-gradient(135deg, rgba(255, 250, 246, 0.92), rgba(235, 223, 214, 0.88));
   backdrop-filter: blur(18px);
   border-radius: 999px;
   padding: 0.7rem 1rem;
@@ -69,8 +71,8 @@ a {
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #8f7a6d;
-  box-shadow: 0 16px 40px rgba(95, 77, 65, 0.08);
+  color: #7f6b5f;
+  box-shadow: 0 14px 34px rgba(112, 92, 80, 0.12);
 }
 
 .soft-pill,
@@ -113,13 +115,18 @@ a {
 .editorial-card,
 .soft-panel,
 .soft-link {
-  border: 1px solid rgba(255, 255, 255, 0.88);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.78);
   border-radius: 2rem;
   box-shadow:
-    0 24px 60px rgba(76, 61, 50, 0.08),
+    0 20px 48px rgba(92, 77, 67, 0.09),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.editorial-card,
+.soft-panel {
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
 }
 
 .editorial-card,
@@ -134,6 +141,13 @@ a {
 .soft-link {
   display: block;
   padding: 1.5rem;
+  position: relative;
+  isolation: isolate;
+  contain: paint;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
   transition:
     transform 200ms ease,
     box-shadow 200ms ease,
@@ -141,10 +155,10 @@ a {
 }
 
 .soft-link:hover {
-  transform: translateY(-6px);
+  transform: translate3d(0, -6px, 0);
   border-color: rgba(255, 255, 255, 1);
   box-shadow:
-    0 30px 70px rgba(76, 61, 50, 0.12),
+    0 24px 52px rgba(98, 82, 71, 0.11),
     inset 0 1px 0 rgba(255, 255, 255, 0.82);
 }
 
@@ -161,8 +175,10 @@ a {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.78);
-  color: #2d2825;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.56);
+  color: #5f5149;
+  box-shadow: 0 10px 24px rgba(98, 82, 71, 0.08);
   font-size: 1.1rem;
   transition: transform 180ms ease;
 }
@@ -174,11 +190,11 @@ a {
 @keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(22px);
+    transform: translate3d(0, 22px, 0);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
