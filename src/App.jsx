@@ -2,6 +2,7 @@ import profilePhoto from './assets/profile-photo.png';
 
 const navItems = [
   { label: 'Home', href: '#home' },
+  { label: 'Works', href: '#works' },
   { label: 'About', href: '#about' }
 ];
 
@@ -16,7 +17,7 @@ const profile = {
   photo: profilePhoto
 };
 
-const quickTags = ['Python', 'C/C++', '程式設計', '網路技術', '微控制器', 'Typescript/React'];
+const quickTags = ['Typescript/React','Python', 'C/C++', 'AI-assisted development', '網路技術', '微控制器'];
 
 const education = [
   {
@@ -50,13 +51,32 @@ const experience = [
 ];
 
 const socials = [
-  { name: 'Instagram', meta: '@___.cw._.__', href: '#' },
-  { name: 'Threads', meta: '@yourhandle', href: '#' },
+  { name: 'LinkedIn', meta: 'Chun wei Hsu', href: 'https://www.linkedin.com/in/chun-wei-hsu-vivian0312/' },
   { name: 'GitHub', meta: 'Chunwei0312', href: 'https://github.com/Chunwei0312' },
   {
     name: 'Email',
     meta: 'vivian940312@gmail.com',
     href: 'mailto:vivian940312@gmail.com'
+  },
+  { name: 'Instagram', meta: '@___.cw._.__', href: 'https://www.instagram.com/___.cw._.__' }
+];
+
+const projects = [
+  {
+    name: 'Dungeon Survivor | Interactive Web App Project',
+    meta: 'Game Project',
+    href: 'https://chunwei0312.github.io/Big-Game/',
+    description:
+      '以 React、TypeScript、Canvas 與 Zustand 開發的瀏覽器遊戲原型，展示模組化前端架構、即時渲染、狀態管理、碰撞邏輯與 responsive UI 實作能力。',
+    tone: 'from-[#ece3d8] via-[#fffaf6] to-[#e7dbcf]'
+  },
+  {
+    name: 'Pocket Arcade | Web App Engineering Project',
+    meta: 'Game Project',
+    href: 'https://chunwei0312.github.io/Mini-Game/',
+    description:
+      '使用 React、TypeScript 與 Vite 建立的互動式 Web App，涵蓋元件化設計、遊戲邏輯拆分、測試驗證與前端架構整理。',
+    tone: 'from-[#e1e7de] via-[#fbfdfb] to-[#e6ece3]'
   }
 ];
 
@@ -207,6 +227,60 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section
+          id="works"
+          className="grid gap-6 border-t border-white/60 py-10 lg:grid-cols-[0.9fr_1.1fr] lg:py-14"
+        >
+          <div className="space-y-4">
+            <span className="soft-label">Works</span>
+            <div className="editorial-card bg-white/78 p-6 sm:p-7">
+              <h2 className="font-display text-[clamp(2.5rem,5vw,4.2rem)] leading-[0.92] text-[#221d1a]">
+                Selected
+                <br />
+                projects
+              </h2>
+              <p className="mt-5 text-base leading-8 text-[#62564e]">
+                目前先放兩個已經上線的遊戲作品，讓這頁除了自我介紹之外，也能直接看到實作成果。
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4">
+            {projects.map((project) => (
+              <a
+                key={project.name}
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                className={`soft-link group flex min-h-[13rem] flex-col justify-between bg-gradient-to-br ${project.tone}`}
+              >
+                <div className="min-w-0">
+                  <div className="flex items-start justify-between gap-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#9b8577]">
+                      {project.meta}
+                    </p>
+                    <span className="soft-arrow shrink-0">↗</span>
+                  </div>
+
+                  <p className="mt-5 font-display text-[2.5rem] leading-[0.95] text-[#2d2825] sm:text-[2.9rem]">
+                    {project.name}
+                  </p>
+
+                  <p className="mt-4 text-sm leading-7 text-[#62564e] sm:text-[0.98rem]">
+                    {project.description}
+                  </p>
+                </div>
+
+                <div className="mt-8 border-t border-white/70 pt-4">
+                  <span className="text-sm font-medium uppercase tracking-[0.26em] text-[#8f7a6d]">
+                    Visit project
+                  </span>
+                </div>
+              </a>
+            ))}
           </div>
         </section>
 
