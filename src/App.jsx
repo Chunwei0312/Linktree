@@ -1,4 +1,4 @@
-import profilePhoto from './assets/profile-photo.png';
+import profilePhoto from './assets/profile-photo.webp';
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -9,7 +9,7 @@ const navItems = [
 const profile = {
   name: '徐淳葳',
   subtitle: '明志科技大學 工業人工智慧學士學位學程',
-  location: 'Taiwan',
+  location: '台灣',
   intro:
     '目前就讀明志科技大學工業人工智慧學士學位學程，從高中開始接觸資訊相關課程，對程式設計與科技應用充滿興趣，主要使用 Python 與 C/C++。',
   about:
@@ -17,7 +17,7 @@ const profile = {
   photo: profilePhoto
 };
 
-const quickTags = ['Typescript/React','Python', 'C/C++', 'AI-assisted development', '網路技術', '微控制器'];
+const quickTags = ['TypeScript / React', 'Python', 'C/C++', 'AI 輔助開發', '網路技術', '微控制器'];
 
 const education = [
   {
@@ -34,7 +34,7 @@ const education = [
 
 const experience = [
   {
-    period: '2025 / 9 - 2026 / 9',
+    period: '2025 / 9 - 至今',
     title: 'Smartsurgery慧術科技 軟體實習工程師',
     description: '協助AI訓練資料標註、程式開發與系統測試相關工作，累積實務經驗。'
   },
@@ -51,7 +51,7 @@ const experience = [
 ];
 
 const socials = [
-  { name: 'LinkedIn', meta: 'Chun wei Hsu', href: 'https://www.linkedin.com/in/chun-wei-hsu-vivian0312/' },
+  { name: 'LinkedIn', meta: 'Chun-Wei Hsu', href: 'https://www.linkedin.com/in/chun-wei-hsu-vivian0312/' },
   { name: 'GitHub', meta: 'Chunwei0312', href: 'https://github.com/Chunwei0312' },
   {
     name: 'Email',
@@ -64,18 +64,18 @@ const socials = [
 const projects = [
   {
     name: 'Dungeon Survivor | Interactive Web App Project',
-    meta: 'Game Project',
+    meta: '遊戲作品',
     href: 'https://chunwei0312.github.io/Big-Game/',
     description:
-      '以 React、TypeScript、Canvas 與 Zustand 開發的瀏覽器遊戲原型，展示模組化前端架構、即時渲染、狀態管理、碰撞邏輯與 responsive UI 實作能力。',
+      '以 React 與 TypeScript 製作的瀏覽器遊戲作品，展示互動邏輯、畫面呈現與前端實作能力。',
     tone: 'from-[#ece3d8] via-[#fffaf6] to-[#e7dbcf]'
   },
   {
     name: 'Pocket Arcade | Web App Engineering Project',
-    meta: 'Game Project',
+    meta: '遊戲作品',
     href: 'https://chunwei0312.github.io/Mini-Game/',
     description:
-      '使用 React、TypeScript 與 Vite 建立的互動式 Web App，涵蓋元件化設計、遊戲邏輯拆分、測試驗證與前端架構整理。',
+      '使用 React、TypeScript 與 Vite 建立的小型互動作品，呈現元件化設計與遊戲邏輯整理能力。',
     tone: 'from-[#e1e7de] via-[#fbfdfb] to-[#e6ece3]'
   }
 ];
@@ -125,7 +125,7 @@ function App() {
           className="grid items-center gap-8 border-t border-white/60 py-8 lg:grid-cols-[1fr_1.02fr] lg:gap-12 lg:py-12"
         >
           <div className="space-y-6">
-            <span className="soft-label">Personal introduction page</span>
+            <span className="soft-label">Personal Profile</span>
 
             <div className="space-y-4">
               <h1 className="font-display text-[clamp(3.2rem,8vw,5.8rem)] leading-[0.9] text-[#221d1a]">
@@ -174,7 +174,7 @@ function App() {
 
                   <div className="mt-8 border-t border-white/70 pt-4">
                     <span className="text-sm font-medium uppercase tracking-[0.26em] text-[#8f7a6d]">
-                      Open link
+                      Open Link
                     </span>
                   </div>
                 </a>
@@ -191,7 +191,7 @@ function App() {
                   className="h-full min-h-[26rem] w-full rounded-[1.6rem] object-cover object-center"
                 />
                 <div className="absolute bottom-8 left-8 rounded-full border border-white/80 bg-white/70 px-4 py-2 text-xs font-medium uppercase tracking-[0.32em] text-[#8f7a6d] backdrop-blur">
-                  Personal photo
+                  Personal Photo
                 </div>
               </div>
 
@@ -240,7 +240,7 @@ function App() {
               <h2 className="font-display text-[clamp(2.5rem,5vw,4.2rem)] leading-[0.92] text-[#221d1a]">
                 Selected
                 <br />
-                projects
+                Projects
               </h2>
               <p className="mt-5 text-base leading-8 text-[#62564e]">
                 目前先放兩個已經上線的遊戲作品，讓這頁除了自我介紹之外，也能直接看到實作成果。
@@ -276,7 +276,7 @@ function App() {
 
                 <div className="mt-8 border-t border-white/70 pt-4">
                   <span className="text-sm font-medium uppercase tracking-[0.26em] text-[#8f7a6d]">
-                    Visit project
+                    Visit Project
                   </span>
                 </div>
               </a>
@@ -292,7 +292,7 @@ function App() {
             <span className="soft-label">About</span>
             <div className="editorial-card bg-white/78 p-6 sm:p-7">
               <h2 className="font-display text-[clamp(2.5rem,5vw,4.2rem)] leading-[0.92] text-[#221d1a]">
-                Self introduction
+                Self Introduction
               </h2>
               <p className="mt-5 text-base leading-8 text-[#62564e]">
                 {profile.about}
@@ -301,7 +301,7 @@ function App() {
 
             <div className="soft-panel bg-[#f3e4e8]/78">
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#8f6f7d]">
-                Suggested content
+                Note
               </p>
               <p className="mt-3 text-base leading-7 text-[#62564e]">
                 內容參考你的履歷整理成較適合網頁閱讀的版本，後續還可以再微調語氣或長度。
