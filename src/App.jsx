@@ -124,7 +124,7 @@ function App() {
           id="home"
           className="grid items-center gap-8 border-t border-white/60 py-8 lg:grid-cols-[1fr_1.02fr] lg:gap-12 lg:py-12"
         >
-          <div className="space-y-6">
+          <div className="order-2 space-y-6 lg:order-1">
             <span className="soft-label">Personal Profile</span>
 
             <div className="space-y-4">
@@ -182,7 +182,7 @@ function App() {
             </div>
           </div>
 
-          <div className="editorial-card overflow-hidden bg-white/78 p-5 sm:p-6">
+          <div className="order-1 editorial-card overflow-hidden bg-white/78 p-5 sm:p-6 lg:order-2">
             <div className="grid gap-4 lg:grid-cols-[1fr_0.85fr]">
               <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#f4ebe4] via-[#fdfbf8] to-[#e8ddd3] p-4">
                 <img
