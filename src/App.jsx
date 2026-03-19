@@ -2,14 +2,16 @@ import profilePhoto from './assets/profile-photo.webp';
 
 const navItems = [
   { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
   { label: 'Works', href: '#works' },
-  { label: 'About', href: '#about' }
+  { label: 'Background', href: '#background' }
 ];
 
 const profile = {
   name: '徐淳葳',
   subtitle: '明志科技大學 工業人工智慧學士學位學程',
-  location: '台灣',
+  role: 'Software & AI Student',
+  location: 'Taiwan',
   intro:
     '目前就讀明志科技大學工業人工智慧學士學位學程，從高中開始接觸資訊相關課程，對程式設計與科技應用充滿興趣，主要使用 Python 與 C/C++。',
   about:
@@ -17,18 +19,27 @@ const profile = {
   photo: profilePhoto
 };
 
-const quickTags = ['TypeScript / React', 'Python', 'C/C++', 'AI 輔助開發', '網路技術', '微控制器'];
+const quickTags = [
+  'TypeScript / React',
+  'Python',
+  'C/C++',
+  'AI 輔助開發',
+  '網路技術',
+  '微控制器'
+];
 
 const education = [
   {
     period: '2023 - 至今',
     title: '明志科技大學',
-    description: '工業人工智慧學士學位學程。持續學習程式設計、科技應用與相關實作能力。'
+    description:
+      '工業人工智慧學士學位學程。持續學習程式設計、科技應用與相關實作能力。'
   },
   {
     period: '2020 - 2023',
     title: '國立臺灣海洋大學附屬高級中學',
-    description: '資訊科。高中階段開始接觸資訊相關課程，建立對程式與科技領域的興趣。'
+    description:
+      '資訊科。高中階段開始接觸資訊相關課程，建立對程式與科技領域的興趣。'
   }
 ];
 
@@ -36,7 +47,8 @@ const experience = [
   {
     period: '2025 / 9 - 至今',
     title: 'Smartsurgery慧術科技 軟體實習工程師',
-    description: '協助AI訓練資料標註、程式開發與系統測試相關工作，累積實務經驗。'
+    description:
+      '協助 AI 訓練資料標註、程式開發與系統測試相關工作，累積實務經驗。'
   },
   {
     period: '2024 / 9 - 2025 / 6',
@@ -51,309 +63,199 @@ const experience = [
 ];
 
 const socials = [
-  { name: 'LinkedIn', meta: 'Chun-Wei Hsu', href: 'https://www.linkedin.com/in/chun-wei-hsu-vivian0312/' },
-  { name: 'GitHub', meta: 'Chunwei0312', href: 'https://github.com/Chunwei0312' },
+  {
+    name: 'LinkedIn',
+    meta: 'Chun-Wei Hsu',
+    href: 'https://www.linkedin.com/in/chun-wei-hsu-vivian0312/'
+  },
+  {
+    name: 'GitHub',
+    meta: 'Chunwei0312',
+    href: 'https://github.com/Chunwei0312'
+  },
   {
     name: 'Email',
     meta: 'vivian940312@gmail.com',
     href: 'mailto:vivian940312@gmail.com'
   },
-  { name: 'Instagram', meta: '@___.cw._.__', href: 'https://www.instagram.com/___.cw._.__' }
+  {
+    name: 'Instagram',
+    meta: '@___.cw._.__',
+    href: 'https://www.instagram.com/___.cw._.__'
+  }
 ];
 
 const projects = [
   {
-    name: 'Dungeon Survivor | Interactive Web App Project',
-    meta: '遊戲作品',
+    title: 'Dungeon Survivor',
+    meta: 'Interactive Web App Project',
     href: 'https://chunwei0312.github.io/Big-Game/',
     description:
-      '以 React 與 TypeScript 製作的瀏覽器遊戲作品，展示互動邏輯、畫面呈現與前端實作能力。',
-    tone: 'bg-[#d9e4d3]'
+      '以 React 與 TypeScript 製作的瀏覽器遊戲作品，展示互動邏輯、畫面呈現與前端實作能力。'
   },
   {
-    name: 'Pocket Arcade | Web App Engineering Project',
-    meta: '遊戲作品',
+    title: 'Pocket Arcade',
+    meta: 'Interactive Web App Project',
     href: 'https://chunwei0312.github.io/Mini-Game/',
     description:
-      '使用 React、TypeScript 與 Vite 建立的小型互動作品，呈現元件化設計與遊戲邏輯整理能力。',
-    tone: 'bg-[#e7d6d2]'
+      '使用 React、TypeScript 與 Vite 建立的小型互動作品，呈現元件化設計與遊戲邏輯整理能力。'
   }
-];
-
-const socialTones = [
-  'bg-[#dde6d7]',
-  'bg-[#e8ddd5]',
-  'bg-[#ece4d9]',
-  'bg-[#e8d9dd]'
 ];
 
 function isExternalLink(href) {
   return href.startsWith('http://') || href.startsWith('https://');
 }
 
+function getLinkProps(href) {
+  return isExternalLink(href)
+    ? { target: '_blank', rel: 'noreferrer' }
+    : {};
+}
+
 function App() {
   return (
-    <main className="korean-bg min-h-screen overflow-hidden px-4 py-5 text-[#2d2825] sm:px-6 lg:px-10">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="ambient-blur left-[8%] top-[8%] h-56 w-56 bg-[#f1d9d0]" />
-        <div className="ambient-blur right-[6%] top-[18%] h-72 w-72 bg-[#dbe7dc]" />
-        <div className="ambient-blur bottom-[10%] left-[46%] h-64 w-64 bg-[#ece1d8]" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl">
-        <header className="flex flex-col gap-5 pb-8 pt-2 lg:flex-row lg:items-center lg:justify-between">
+    <main className="page-shell text-slate-900 antialiased">
+      <div className="page-wrap">
+        <header className="site-header">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.42em] text-[#8f7a6d]">
-              Personal Page
-            </p>
-            <p className="font-display text-[clamp(1.9rem,4vw,2.8rem)] leading-none text-[#2d2825]">
-              {profile.name}
-            </p>
+            <p className="eyebrow">{profile.name}</p>
+            <p className="site-title">{profile.role}</p>
           </div>
 
-          <nav className="flex flex-wrap gap-2.5">
+          <nav className="site-nav" aria-label="Section navigation">
             {navItems.map((item) => (
-              <a key={item.label} href={item.href} className="soft-pill">
+              <a key={item.label} href={item.href} className="nav-link">
                 {item.label}
               </a>
             ))}
           </nav>
         </header>
 
-        <section
-          id="home"
-          className="grid items-center gap-8 border-t border-white/60 py-8 lg:grid-cols-[1fr_1.02fr] lg:gap-12 lg:py-12"
-        >
-          <div className="order-2 space-y-6 lg:order-1">
-            <span className="soft-label">Personal Profile</span>
-
-            <div className="space-y-4">
-              <h1 className="font-display text-[clamp(3.2rem,8vw,5.8rem)] leading-[0.9] text-[#221d1a]">
-                About me,
-                <br />
-                simply.
-              </h1>
-              <p className="max-w-2xl text-lg leading-8 text-[#5d5149] sm:text-xl">
-                {profile.intro}
-              </p>
+        <section id="home" className="hero-grid">
+          <aside className="profile-card">
+            <div className="profile-frame">
+              <img
+                src={profile.photo}
+                alt={`${profile.name} profile`}
+                className="profile-image"
+              />
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              {quickTags.map((tag) => (
-                <span key={tag} className="mini-chip">
-                  {tag}
-                </span>
-              ))}
+            <div className="profile-summary">
+              <div>
+                <p className="info-label">Location</p>
+                <p className="info-value">{profile.location}</p>
+              </div>
+              <div>
+                <p className="info-label">Focus</p>
+                <p className="info-copy">Software Development / AI / Frontend</p>
+              </div>
             </div>
+          </aside>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              {socials.map((item, index) => (
+          <div className="hero-copy">
+            <p className="section-kicker">Personal Portfolio</p>
+            <h1 className="hero-title">Hi, I&apos;m Vivian.</h1>
+            <p className="hero-subtitle">{profile.subtitle}</p>
+            <p className="hero-body">{profile.intro}</p>
+
+            <div className="social-grid">
+              {socials.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  target={isExternalLink(item.href) ? '_blank' : undefined}
-                  rel={isExternalLink(item.href) ? 'noreferrer' : undefined}
-                  className={`soft-link group flex min-h-[12.5rem] flex-col justify-between ${socialTones[index % socialTones.length]}`}
+                  className="social-card"
+                  {...getLinkProps(item.href)}
                 >
-                  <div className="min-w-0">
-                    <div className="flex items-start justify-between gap-4">
-                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#9b8577]">
-                        Social
-                      </p>
-                      <span className="soft-arrow shrink-0">↗</span>
-                    </div>
-
-                    <p className="mt-5 font-display text-[2.4rem] leading-[0.95] text-[#2d2825] sm:text-[2.7rem]">
-                        {item.name}
-                    </p>
-
-                    <p className="social-meta mt-4 text-sm leading-6 text-[#62564e] sm:text-[0.95rem]">
-                      {item.meta}
-                    </p>
-                  </div>
-
-                  <div className="mt-8 border-t border-white/70 pt-4">
-                    <span className="text-sm font-medium uppercase tracking-[0.26em] text-[#8f7a6d]">
-                      Open Link
-                    </span>
-                  </div>
+                  <p className="social-name">{item.name}</p>
+                  <p className="social-meta">{item.meta}</p>
                 </a>
               ))}
             </div>
           </div>
+        </section>
 
-          <div className="order-1 editorial-card overflow-hidden bg-white/78 p-5 sm:p-6 lg:order-2">
-            <div className="grid gap-4 lg:grid-cols-[1fr_0.85fr]">
-              <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#f4ebe4] via-[#fdfbf8] to-[#e8ddd3] p-4">
-                <img
-                  src={profile.photo}
-                  alt={`${profile.name} profile`}
-                  className="h-full min-h-[26rem] w-full rounded-[1.6rem] object-cover object-center"
-                />
+        <section id="about" className="section-block">
+          <div className="section-heading">
+            <p className="section-kicker">About Me</p>
+            <h2 className="section-title">A short introduction</h2>
+          </div>
+
+          <div className="section-grid">
+            <article className="surface-card">
+              <p className="long-form">{profile.about}</p>
+            </article>
+
+            <aside className="surface-card">
+              <p className="card-label">Core Skills</p>
+              <div className="pill-wrap">
+                {quickTags.map((tag) => (
+                  <span key={tag} className="skill-pill">
+                    {tag}
+                  </span>
+                ))}
               </div>
-
-              <div className="flex flex-col gap-4">
-                <div className="soft-panel flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#9b8577]">
-                    Name
-                  </p>
-                  <p className="mt-3 font-display text-4xl leading-none text-[#2d2825]">
-                    {profile.name}
-                  </p>
-                  <p className="mt-3 text-base leading-7 text-[#62564e]">
-                    {profile.subtitle}
-                  </p>
-                </div>
-
-                <div className="soft-panel bg-[#eadfd6]/88">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#9b8577]">
-                    Location
-                  </p>
-                  <p className="mt-3 font-display text-3xl leading-none text-[#2d2825]">
-                    {profile.location}
-                  </p>
-                </div>
-
-                <div className="soft-panel bg-[#cfdcca]/88">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#6c756d]">
-                    Focus
-                  </p>
-                  <p className="mt-3 text-base leading-7 text-[#526054]">
-                    目前頁面以照片、自我介紹、學歷、經歷與社群連結為主，適合當個人入口頁。
-                  </p>
-                </div>
-              </div>
-            </div>
+            </aside>
           </div>
         </section>
 
-        <section
-          id="works"
-          className="grid gap-6 border-t border-white/60 py-10 lg:grid-cols-[0.9fr_1.1fr] lg:py-14"
-        >
-          <div className="space-y-4">
-            <span className="soft-label">Works</span>
-            <div className="editorial-card bg-white/78 p-6 sm:p-7">
-              <h2 className="font-display text-[clamp(2.5rem,5vw,4.2rem)] leading-[0.92] text-[#221d1a]">
-                Selected
-                <br />
-                Projects
-              </h2>
-              <p className="mt-5 text-base leading-8 text-[#62564e]">
-                目前先放兩個已經上線的遊戲作品，讓這頁除了自我介紹之外，也能直接看到實作成果。
-              </p>
-            </div>
+        <section id="works" className="section-block">
+          <div className="section-heading">
+            <p className="section-kicker">Featured Work</p>
+            <h2 className="section-title">Selected projects</h2>
           </div>
 
-          <div className="grid gap-4">
+          <div className="stack-list">
             {projects.map((project) => (
               <a
-                key={project.name}
+                key={project.title}
                 href={project.href}
-                target="_blank"
-                rel="noreferrer"
-                className={`soft-link group flex min-h-[13rem] flex-col justify-between ${project.tone}`}
+                className="project-card"
+                {...getLinkProps(project.href)}
               >
-                <div className="min-w-0">
-                  <div className="flex items-start justify-between gap-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#9b8577]">
-                      {project.meta}
-                    </p>
-                    <span className="soft-arrow shrink-0">↗</span>
-                  </div>
-
-                  <p className="mt-5 font-display text-[2.5rem] leading-[0.95] text-[#2d2825] sm:text-[2.9rem]">
-                    {project.name}
-                  </p>
-
-                  <p className="mt-4 text-sm leading-7 text-[#62564e] sm:text-[0.98rem]">
-                    {project.description}
-                  </p>
+                <div className="project-copy">
+                  <p className="project-meta">{project.meta}</p>
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
                 </div>
-
-                <div className="mt-8 border-t border-white/70 pt-4">
-                  <span className="text-sm font-medium uppercase tracking-[0.26em] text-[#8f7a6d]">
-                    Visit Project
-                  </span>
-                </div>
+                <span className="project-link">Visit Project</span>
               </a>
             ))}
           </div>
         </section>
 
-        <section
-          id="about"
-          className="grid gap-6 border-t border-white/60 py-10 lg:grid-cols-[1.02fr_0.98fr] lg:py-14"
-        >
-          <div className="space-y-4">
-            <span className="soft-label">About</span>
-            <div className="editorial-card bg-white/78 p-6 sm:p-7">
-              <h2 className="font-display text-[clamp(2.5rem,5vw,4.2rem)] leading-[0.92] text-[#221d1a]">
-                Self Introduction
-              </h2>
-              <p className="mt-5 text-base leading-8 text-[#62564e]">
-                {profile.about}
-              </p>
-            </div>
-
-            <div className="soft-panel bg-[#d8c8cd]/88">
-              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#8f6f7d]">
-                Note
-              </p>
-              <p className="mt-3 text-base leading-7 text-[#62564e]">
-                內容參考你的履歷整理成較適合網頁閱讀的版本，後續還可以再微調語氣或長度。
-              </p>
-            </div>
+        <section id="background" className="section-block">
+          <div className="section-heading">
+            <p className="section-kicker">Background</p>
+            <h2 className="section-title">Experience and education</h2>
           </div>
 
-          <div className="grid gap-4">
-            <div className="editorial-card bg-white/80 p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#9b8577]">
-                Education
-              </p>
-              <div className="mt-5 space-y-4">
-                {education.map((item) => (
-                  <div
-                    key={`${item.period}-${item.title}`}
-                    className="rounded-[1.5rem] border border-white/80 bg-[#f8f4ef]/90 p-4"
-                  >
-                    <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#9b8577]">
-                      {item.period}
-                    </p>
-                    <p className="mt-2 font-display text-3xl leading-none text-[#2d2825]">
-                      {item.title}
-                    </p>
-                    <p className="mt-3 text-base leading-7 text-[#62564e]">
-                      {item.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="editorial-card bg-white/80 p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#9b8577]">
-                Experience
-              </p>
-              <div className="mt-5 space-y-4">
+          <div className="background-grid">
+            <article className="surface-card">
+              <p className="card-label">Experience</p>
+              <div className="entry-list">
                 {experience.map((item) => (
-                  <div
-                    key={`${item.period}-${item.title}`}
-                    className="rounded-[1.5rem] border border-white/80 bg-[#f8f4ef]/90 p-4"
-                  >
-                    <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#9b8577]">
-                      {item.period}
-                    </p>
-                    <p className="mt-2 font-display text-3xl leading-none text-[#2d2825]">
-                      {item.title}
-                    </p>
-                    <p className="mt-3 text-base leading-7 text-[#62564e]">
-                      {item.description}
-                    </p>
+                  <div key={`${item.period}-${item.title}`} className="entry-item">
+                    <p className="entry-period">{item.period}</p>
+                    <h3 className="entry-title">{item.title}</h3>
+                    <p className="entry-description">{item.description}</p>
                   </div>
                 ))}
               </div>
-            </div>
+            </article>
+
+            <article className="surface-card">
+              <p className="card-label">Education</p>
+              <div className="entry-list">
+                {education.map((item) => (
+                  <div key={`${item.period}-${item.title}`} className="entry-item">
+                    <p className="entry-period">{item.period}</p>
+                    <h3 className="entry-title">{item.title}</h3>
+                    <p className="entry-description">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
           </div>
         </section>
       </div>
