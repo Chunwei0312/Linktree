@@ -10,13 +10,13 @@ const navItems = [
 const profile = {
   name: '徐淳葳',
   subtitle: '明志科技大學 工業人工智慧學士學位學程',
-  role: 'Software Engineering & AI Student',
+  role: 'Student Developer & AI Enthusiast',
   brand: 'Vivian Hsu',
   location: 'Taiwan',
   intro:
-    '目前就讀明志科技大學工業人工智慧學士學位學程，從高中開始接觸資訊相關課程，對程式設計與科技應用充滿興趣，主要使用 Python 與 C/C++。大三實習後也開始接觸 TypeScript 與 React，持續拓展前端開發能力。',
+    '目前就讀明志科技大學工業人工智慧學士學位學程，平常主要接觸 Python、C/C++，也在實習與個人作品中持續練習 TypeScript / React。喜歡把想法做成可以互動的網頁與小作品，正在一步步累積軟體開發、AI 應用與前端實作的經驗。',
   about:
-    '我的個性比較內向，但做事細心、負責任，遇到任務會努力做到最好。雖然目前還在累積實務經驗，但我學習意願高、適應力強，期待持續在實作中成長，朝軟體開發或 AI 技術方向發展。',
+    '我是 Vivian，對程式設計、AI 應用和前端互動很有興趣。除了在課堂上學習，也會透過實習、作品和校內經驗持續練習拆解問題、和人合作，以及把想法實作出來，希望未來能做出更多實用又有完成度的產品，慢慢走向自己喜歡的開發方向。',
   photo: profilePhoto
 };
 
@@ -92,14 +92,14 @@ const projects = [
     meta: 'Interactive Web App Project',
     href: 'https://chunwei0312.github.io/Big-Game/',
     description:
-      '以 React 與 TypeScript 製作的瀏覽器遊戲作品，展示互動邏輯、畫面呈現與前端實作能力。'
+      '以 React 與 TypeScript 製作的瀏覽器遊戲作品，重點放在互動節奏、畫面呈現與遊戲邏輯整理。'
   },
   {
     title: 'Pocket Arcade',
     meta: 'Interactive Web App Project',
     href: 'https://chunwei0312.github.io/Mini-Game/',
     description:
-      '使用 React、TypeScript 與 Vite 建立的小型互動作品，呈現元件化設計與遊戲邏輯整理能力。'
+      '用 React、TypeScript 與 Vite 製作的小型互動遊戲作品，練習元件設計、狀態處理與前端細節。'
   }
 ];
 
@@ -119,7 +119,7 @@ function App() {
       <div className="page-wrap">
         <header className="site-header">
           <div>
-            <p className="eyebrow">Personal Portfolio</p>
+            <p className="eyebrow">Personal Website</p>
             <p className="site-title">{profile.brand}</p>
           </div>
 
@@ -160,7 +160,7 @@ function App() {
             </div>
 
             <div className="profile-skills">
-              <p className="card-label">Core Skills</p>
+              <p className="card-label">Things I Work With</p>
               <div className="pill-wrap">
                 {quickTags.map((tag) => (
                   <span key={tag} className="skill-pill">
@@ -173,7 +173,7 @@ function App() {
 
           <div className="hero-copy">
             <div className="hero-heading">
-              <p className="section-kicker">Personal Portfolio</p>
+              <p className="section-kicker">Personal Website</p>
               <h1 className="hero-title">Hi, I&apos;m Vivian.</h1>
               <p className="hero-subtitle">{profile.subtitle}</p>
             </div>
@@ -198,7 +198,7 @@ function App() {
         <section id="about" className="section-block">
           <div className="section-heading">
             <p className="section-kicker">About Me</p>
-            <h2 className="section-title">A short introduction</h2>
+            <h2 className="section-title">A little more about me</h2>
           </div>
 
           <div className="section-grid">
@@ -209,7 +209,7 @@ function App() {
             <aside className="surface-card">
               <p className="card-label">Currently</p>
               <p className="long-form">
-                目前持續累積軟體開發、AI 應用與前端實作經驗，也透過作品與實習把學校所學轉成更具體的實務能力。
+                現在在 Smartsurgery 慧術科技擔任軟體實習工程師，接觸 AI 訓練資料整理、系統測試與開發支援，也持續用 React 和 TypeScript 製作自己的小作品，讓在學校學到的內容可以真的落到實作。
               </p>
             </aside>
           </div>
@@ -243,7 +243,7 @@ function App() {
         <section id="background" className="section-block">
           <div className="section-heading">
             <p className="section-kicker">Background</p>
-            <h2 className="section-title">Experience and education</h2>
+            <h2 className="section-title">Experience & education</h2>
           </div>
 
           <div className="background-grid">
