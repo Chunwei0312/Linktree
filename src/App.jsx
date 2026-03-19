@@ -190,9 +190,6 @@ function App() {
                   alt={`${profile.name} profile`}
                   className="h-full min-h-[26rem] w-full rounded-[1.6rem] object-cover object-center"
                 />
-                <div className="absolute bottom-8 left-8 rounded-full border border-white/80 bg-white/70 px-4 py-2 text-xs font-medium uppercase tracking-[0.32em] text-[#8f7a6d] backdrop-blur">
-                  Personal Photo
-                </div>
               </div>
 
               <div className="flex flex-col gap-4">
