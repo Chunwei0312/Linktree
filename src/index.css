@@ -142,6 +142,49 @@ a {
   margin-top: 1rem;
 }
 
+.mobile-profile-head {
+  display: block;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(54, 65, 82, 0.1);
+}
+
+.mobile-profile-name,
+.mobile-profile-role,
+.mobile-profile-subtitle {
+  margin: 0;
+}
+
+.mobile-profile-name {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #111827;
+}
+
+.mobile-profile-role {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9a8274;
+}
+
+.mobile-profile-subtitle {
+  margin-top: 0.55rem;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+.profile-skills {
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(54, 65, 82, 0.1);
+}
+
 .info-label {
   margin: 0;
   font-size: 0.72rem;
@@ -414,6 +457,10 @@ a {
 }
 
 @media (min-width: 960px) {
+  .mobile-profile-head {
+    display: none;
+  }
+
   .hero-grid {
     grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.75fr);
     gap: 2rem;
@@ -435,5 +482,15 @@ a {
 
   .project-copy {
     max-width: 44rem;
+  }
+}
+
+@media (max-width: 959px) {
+  .hero-heading {
+    display: none;
+  }
+
+  .hero-copy {
+    padding-top: 0.15rem;
   }
 }

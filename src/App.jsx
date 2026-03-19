@@ -10,10 +10,11 @@ const navItems = [
 const profile = {
   name: '徐淳葳',
   subtitle: '明志科技大學 工業人工智慧學士學位學程',
-  role: 'Software & AI Student',
+  role: 'Software Engineering & AI Student',
+  brand: 'Vivian Hsu',
   location: 'Taiwan',
   intro:
-    '目前就讀明志科技大學工業人工智慧學士學位學程，從高中開始接觸資訊相關課程，對程式設計與科技應用充滿興趣，主要使用 Python 與 C/C++。',
+    '目前就讀明志科技大學工業人工智慧學士學位學程，從高中開始接觸資訊相關課程，對程式設計與科技應用充滿興趣，主要使用 Python 與 C/C++。大三實習後也開始接觸 TypeScript 與 React，持續拓展前端開發能力。',
   about:
     '我的個性比較內向，但做事細心、負責任，遇到任務會努力做到最好。雖然目前還在累積實務經驗，但我學習意願高、適應力強，期待持續在實作中成長，朝軟體開發或 AI 技術方向發展。',
   photo: profilePhoto
@@ -33,13 +34,13 @@ const education = [
     period: '2023 - 至今',
     title: '明志科技大學',
     description:
-      '工業人工智慧學士學位學程。持續學習程式設計、科技應用與相關實作能力。'
+      '工業人工智慧學士學位學程。持續學習程式設計、科技應用與相關進階實作能力。'
   },
   {
     period: '2020 - 2023',
     title: '國立臺灣海洋大學附屬高級中學',
     description:
-      '資訊科。高中階段開始接觸資訊相關課程，建立對程式與科技領域的興趣。'
+      '資訊科。高中階段開始接觸資訊相關課程，建立對程式與科技領域的興趣與基礎。'
   }
 ];
 
@@ -118,8 +119,8 @@ function App() {
       <div className="page-wrap">
         <header className="site-header">
           <div>
-            <p className="eyebrow">{profile.name}</p>
-            <p className="site-title">{profile.role}</p>
+            <p className="eyebrow">Personal Portfolio</p>
+            <p className="site-title">{profile.brand}</p>
           </div>
 
           <nav className="site-nav" aria-label="Section navigation">
@@ -141,6 +142,12 @@ function App() {
               />
             </div>
 
+            <div className="mobile-profile-head">
+              <p className="mobile-profile-name">{profile.name}</p>
+              <p className="mobile-profile-role">{profile.role}</p>
+              <p className="mobile-profile-subtitle">{profile.subtitle}</p>
+            </div>
+
             <div className="profile-summary">
               <div>
                 <p className="info-label">Location</p>
@@ -151,12 +158,25 @@ function App() {
                 <p className="info-copy">Software Development / AI / Frontend</p>
               </div>
             </div>
+
+            <div className="profile-skills">
+              <p className="card-label">Core Skills</p>
+              <div className="pill-wrap">
+                {quickTags.map((tag) => (
+                  <span key={tag} className="skill-pill">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </aside>
 
           <div className="hero-copy">
-            <p className="section-kicker">Personal Portfolio</p>
-            <h1 className="hero-title">Hi, I&apos;m Vivian.</h1>
-            <p className="hero-subtitle">{profile.subtitle}</p>
+            <div className="hero-heading">
+              <p className="section-kicker">Personal Portfolio</p>
+              <h1 className="hero-title">Hi, I&apos;m Vivian.</h1>
+              <p className="hero-subtitle">{profile.subtitle}</p>
+            </div>
             <p className="hero-body">{profile.intro}</p>
 
             <div className="social-grid">
@@ -187,14 +207,10 @@ function App() {
             </article>
 
             <aside className="surface-card">
-              <p className="card-label">Core Skills</p>
-              <div className="pill-wrap">
-                {quickTags.map((tag) => (
-                  <span key={tag} className="skill-pill">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <p className="card-label">Currently</p>
+              <p className="long-form">
+                目前持續累積軟體開發、AI 應用與前端實作經驗，也透過作品與實習把學校所學轉成更具體的實務能力。
+              </p>
             </aside>
           </div>
         </section>
